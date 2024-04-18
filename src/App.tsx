@@ -1,38 +1,25 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import { Box, Grid } from "@chakra-ui/react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { pages } from "./pages";
+import NotFound from "./components/NotFound";
+import Home from "./components/Home";
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
     <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
+        <Router>
+            <Grid minH="100vh" py={3} px={9}>
+                <Routes>
+                    {/* {pages.map((page) => (
+                    <Route
+                        key={page.link}
+                        path={page.link}
+                        element={page.element}
+                    />
+                ))} */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </Grid>
+        </Router>
     </Box>
-  </ChakraProvider>
-)
+);

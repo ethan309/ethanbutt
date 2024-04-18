@@ -1,29 +1,50 @@
-import { ColorModeScript } from "@chakra-ui/react"
-import * as React from "react"
-import * as ReactDOM from "react-dom/client"
-import { App } from "./App"
-import reportWebVitals from "./reportWebVitals"
-import * as serviceWorker from "./serviceWorker"
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
+import {
+    ChakraProvider,
+    ColorModeScript,
+    StyleFunctionProps,
+    defineStyleConfig,
+    extendTheme,
+} from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
+import reportWebVitals from "./reportWebVitals";
+import * as serviceWorker from "./serviceWorker";
+import { App } from "./App";
+import { RecoilRoot } from "recoil";
 
+const container = document.getElementById("root");
+if (!container) throw new Error("Failed to find the root element");
+const root = ReactDOM.createRoot(container);
 
-const container = document.getElementById("root")
-if (!container) throw new Error('Failed to find the root element');
-const root = ReactDOM.createRoot(container)
+export const linkTheme = defineStyleConfig({
+    baseStyle: {
+        color: "red.900",
+        textDecoration: "underline",
+    },
+});
+
+const theme = extendTheme({
+    styles: {
+        global: (props: StyleFunctionProps) => ({
+            body: {
+                bg: mode("#d9d9d9", "#36454F")(props),
+            },
+        }),
+    },
+    components: { Link: linkTheme },
+});
 
 root.render(
-  <React.StrictMode>
-    <ColorModeScript />
-    <App />
-  </React.StrictMode>,
-)
+    <React.StrictMode>
+        <ColorModeScript />
+        <RecoilRoot>
+            <ChakraProvider theme={theme}>
+                <App />
+            </ChakraProvider>
+        </RecoilRoot>
+    </React.StrictMode>
+);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://cra.link/PWA
-serviceWorker.unregister()
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals()
-
+serviceWorker.unregister();
+reportWebVitals();
