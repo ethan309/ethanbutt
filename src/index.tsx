@@ -18,10 +18,10 @@ if (!container) throw new Error("Failed to find the root element");
 const root = ReactDOM.createRoot(container);
 
 export const linkTheme = defineStyleConfig({
-    baseStyle: {
-        color: "red.900",
+    baseStyle: (props: StyleFunctionProps) => ({
+        color: mode("red.900", "red.100")(props),
         textDecoration: "underline",
-    },
+    }),
 });
 
 const theme = extendTheme({

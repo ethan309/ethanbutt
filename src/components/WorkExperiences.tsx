@@ -1,20 +1,46 @@
-import { Heading, List, Stack, Text, Link, Image } from "@chakra-ui/react";
-import React from "react";
+import {
+    Heading,
+    List,
+    Stack,
+    Text,
+    Link,
+    Image,
+    useColorModeValue,
+} from "@chakra-ui/react";
 import WorkExperience from "./WorkExperience";
 import { Images } from "../images";
 
 const WorkExperiences = () => {
+    const FlywheelLogo = useColorModeValue(
+        Images.FlywheelLogoBanner,
+        Images.FlywheelLogoBannerBlue
+    );
+
     return (
         <Stack>
-            <Heading size="xl" mb={6}>
-                Some Places I've Worked
-            </Heading>
+            <Heading mb={2}>Some Places I've Worked</Heading>
             <List spacing={10}>
                 <WorkExperience
-                    // companyName="Flywheel"
-                    CompanyLogo={
-                        <Image maxW="12rem" src={Images.FlywheelLogoBanner} />
+                    // companyName="Epic"
+                    CompanyLogo={<Image maxW="5rem" src={Images.EpicLogo} />}
+                    companyLink="https://www.epic.com"
+                    position="Software Developer, Team Lead"
+                    Description={
+                        <Text>
+                            Professionally grow team of developers, speak on
+                            product vision with healthcare organizations to
+                            improve inpatient outcomes, and prioritize project
+                            plans for MyChart Bedside. Lead Bedside TV platform
+                            launch, allowing hospital patients to access their
+                            health data on footwall TVs. Improve development
+                            processes, troubleshoot internal development issues,
+                            and conduct code reviews as Git and React expert.
+                        </Text>
                     }
+                />
+                <WorkExperience
+                    // companyName="Flywheel"
+                    CompanyLogo={<Image maxW="12rem" src={FlywheelLogo} />}
                     companyLink="https://getflywheel.com"
                     position="Software Engineer Intern: Local Core Team"
                     Description={
@@ -31,7 +57,7 @@ const WorkExperiences = () => {
                                 href="https://www.npmjs.com/package/create-local-addon"
                                 isExternal
                             >
-                                published to NPM
+                                published to NPM.
                             </Link>
                             .
                         </Text>

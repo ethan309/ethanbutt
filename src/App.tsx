@@ -9,13 +9,13 @@ export const App = () => (
         <Router>
             <Grid minH="100vh" py={3} px={9}>
                 <Routes>
-                    {/* {pages.map((page) => (
-                    <Route
-                        key={page.link}
-                        path={page.link}
-                        element={page.element}
-                    />
-                ))} */}
+                    {pages.map((page) => (
+                        <Route
+                            key={page.link}
+                            path={page.link}
+                            element={page.element}
+                        />
+                    ))}
                     <Route path="/" element={<Home />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>

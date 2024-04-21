@@ -1,9 +1,20 @@
-import { Image, Text, VStack, Wrap, WrapItem, Link } from "@chakra-ui/react";
+import {
+    Image,
+    Text,
+    VStack,
+    Wrap,
+    WrapItem,
+    Link,
+    HStack,
+    Heading,
+    Icon,
+} from "@chakra-ui/react";
 import { Images } from "../images";
 import ProfileLink from "./ProfileLink";
-import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { SiApplemusic } from "react-icons/si";
 import { emailAddress } from "../constants";
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { IoMusicalNotes } from "react-icons/io5";
+import { LuMail } from "react-icons/lu";
 
 const Profile = () => {
     return (
@@ -16,16 +27,27 @@ const Profile = () => {
                 alignSelf="center"
                 maxW="80%"
             />
-            <Text textAlign="start">
+            <Heading>Ethan Bütt</Heading>
+            <Text>
                 2021 graduate from University of Nebraska - Lincoln; obtained
                 Bachelor's of Science in Software Engineering with a minor in
                 Mathematics.
             </Text>
-            <Link href={`mailto:${emailAddress}`}>{emailAddress}</Link>
+            <Wrap>
+                <WrapItem>
+                    <HStack>
+                        <Icon as={LuMail} />
+                        <Text as="b">Wanna chat?</Text>
+                    </HStack>
+                </WrapItem>
+                <Wrap>
+                    <Link href={`mailto:${emailAddress}`}>{emailAddress}</Link>
+                </Wrap>
+            </Wrap>
             <Wrap>
                 <WrapItem>
                     <ProfileLink
-                        Icon={FaGithubSquare}
+                        icon={FaGithub}
                         iconColor="#24292E"
                         link="https://github.com/ethan309"
                         label="GitHub"
@@ -34,7 +56,7 @@ const Profile = () => {
                 </WrapItem>
                 <WrapItem>
                     <ProfileLink
-                        Icon={FaLinkedin}
+                        icon={FaLinkedinIn}
                         iconColor="#0077B5"
                         link="http://www.linkedin.com/in/ethan-d-butt"
                         label="LinkedIn"
@@ -43,7 +65,7 @@ const Profile = () => {
                 </WrapItem>
                 <WrapItem>
                     <ProfileLink
-                        Icon={SiApplemusic}
+                        icon={IoMusicalNotes}
                         iconColor="#FC3C44"
                         link="https://music.apple.com/profile/ethan10243"
                         label="Apple Music"
@@ -52,7 +74,7 @@ const Profile = () => {
                 </WrapItem>
                 <WrapItem>
                     <ProfileLink
-                        Icon={FaFacebookSquare}
+                        icon={FaFacebookF}
                         iconColor="#1877F2"
                         link="https://www.facebook.com/ethan10243"
                         label="Facebook"

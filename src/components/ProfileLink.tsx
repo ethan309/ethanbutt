@@ -1,10 +1,10 @@
-import { Button, IconButton } from "@chakra-ui/react";
+import { Button, Icon, IconButton } from "@chakra-ui/react";
 import { useCallback } from "react";
 import { IconType } from "react-icons";
 import { useExternalNavigate } from "../api/use-external-navigate";
 
 interface IProps {
-    Icon: IconType;
+    icon: IconType;
     iconColor: string;
     link: string;
     label: string;
@@ -12,19 +12,24 @@ interface IProps {
 }
 
 const ProfileLink = (props: IProps) => {
-    const { Icon, iconColor, link, label, isLabelHidden = false } = props;
+    const { icon, iconColor, link, label, isLabelHidden = false } = props;
 
     const navigate = useExternalNavigate();
     const onClick = useCallback(() => navigate(link), [navigate, link]);
 
     return isLabelHidden ? (
         <IconButton
+            size="lg"
             onClick={onClick}
-            icon={<Icon color={iconColor} />}
+            icon={<Icon as={icon} boxSize="60%" color={iconColor} />}
             aria-label={label}
         />
     ) : (
-        <Button onClick={onClick} leftIcon={<Icon color={iconColor} />}>
+        <Button
+            size="lg"
+            onClick={onClick}
+            leftIcon={<Icon as={icon} color={iconColor} />}
+        >
             {label}
         </Button>
     );

@@ -3,9 +3,7 @@ import { Heading, Stack, Text, Link } from "@chakra-ui/react";
 const Basics = () => {
     return (
         <Stack>
-            <Heading size="xl" mb={10}>
-                Hey
-            </Heading>
+            <Heading>Hey</Heading>
             <Text mb={6}>
                 I am a software engineer at{" "}
                 <Link href="https://www.epic.com" isExternal>
@@ -26,9 +24,8 @@ const Basics = () => {
                 intuitive interfaces and interactions for users.
             </Text>
             <Text>
-                Life is more than work. I enjoy messing around with Photoshop,
-                discovering new music, and collecting unique card and board
-                games.
+                Outside work, I enjoy messing around with Photoshop, discovering
+                new music, and collecting unique card and board games.
             </Text>
         </Stack>
     );
