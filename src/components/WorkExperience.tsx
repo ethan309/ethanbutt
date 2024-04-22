@@ -30,7 +30,7 @@ const WorkExperience = (props: IProps) => {
     return (
         <Stack>
             {companyLink ? (
-                <Link href={companyLink} isExternal>
+                <Link href={companyLink} isExternal textDecoration="none">
                     {CompanyTitleLine}
                 </Link>
             ) : (
