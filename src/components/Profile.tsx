@@ -33,7 +33,7 @@ const Profile = () => {
                 Bachelor's of Science in Software Engineering with a minor in
                 Mathematics.
             </Text>
-            <Wrap>
+            <Wrap justify="center">
                 <WrapItem>
                     <HStack>
                         <Icon as={LuMail} />
@@ -44,8 +44,8 @@ const Profile = () => {
                     <Link href={`mailto:${emailAddress}`}>{emailAddress}</Link>
                 </Wrap>
             </Wrap>
-            <Wrap>
-                <WrapItem>
+            <Wrap justify="center">
+                <WrapItem columnGap={2}>
                     <ProfileLink
                         icon={FaGithub}
                         iconColor="#24292E"
@@ -53,8 +53,6 @@ const Profile = () => {
                         label="GitHub"
                         isLabelHidden
                     />
-                </WrapItem>
-                <WrapItem>
                     <ProfileLink
                         icon={FaLinkedinIn}
                         iconColor="#0077B5"
@@ -63,7 +61,7 @@ const Profile = () => {
                         isLabelHidden
                     />
                 </WrapItem>
-                <WrapItem>
+                <WrapItem columnGap={2}>
                     <ProfileLink
                         icon={IoMusicalNotes}
                         iconColor="#FC3C44"
@@ -71,8 +69,6 @@ const Profile = () => {
                         label="Apple Music"
                         isLabelHidden
                     />
-                </WrapItem>
-                <WrapItem>
                     <ProfileLink
                         icon={FaFacebookF}
                         iconColor="#1877F2"
