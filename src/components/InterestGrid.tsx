@@ -1,13 +1,14 @@
 import { Heading, Stack } from "@chakra-ui/react";
 import { CgWebsite } from "react-icons/cg";
-import { TbAugmentedReality, TbChartBubble } from "react-icons/tb";
-import { IoPhonePortraitOutline } from "react-icons/io5";
+import { TbAugmentedReality } from "react-icons/tb";
+import { LuProjector } from "react-icons/lu";
+import { CiStopwatch } from "react-icons/ci";
 import ItemGrid from "./ItemGrid";
 
 const iterests = [
     { icon: CgWebsite, label: "Front-end Web Development Frameworks" },
-    { icon: TbChartBubble, label: "UX Design" },
-    { icon: IoPhonePortraitOutline, label: "Mobile Application Design" },
+    { icon: LuProjector, label: "Audio/Video Work" },
+    { icon: CiStopwatch, label: "Project Estimation Strategies" },
     { icon: TbAugmentedReality, label: "Augmented Reality" },
 ];
 

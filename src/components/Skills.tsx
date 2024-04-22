@@ -13,7 +13,7 @@ const Skills = () => {
             <Skill label="Python" type="technical" />
             <Skill label="Swift" type="technical" />
             <Skill label="Java" type="technical" />
-            <Skill label="MongoDB" type="technical" />
+            <Skill label="MongoDB Atlas" type="technical" />
             <Skill label="web development" type="technical" />
             <Skill label="software testing" type="technical" />
             <Skill label="Bash" type="technical" />

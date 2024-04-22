@@ -37,7 +37,7 @@ const Profile = () => {
                 <WrapItem>
                     <HStack>
                         <Icon as={LuMail} />
-                        <Text as="b">Wanna chat?</Text>
+                        <Text as="b">Want to chat?</Text>
                     </HStack>
                 </WrapItem>
                 <Wrap>
