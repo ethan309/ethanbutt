@@ -15,7 +15,7 @@ const iterests = [
 const InterestGrid = () => {
     return (
         <Stack>
-            <Heading mb={2}>A Few Areas that Interest Me</Heading>
+            <Heading mb={2}>Some Areas that Interest Me</Heading>
             <ItemGrid items={iterests} />
         </Stack>
     );

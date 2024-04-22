@@ -60,6 +60,14 @@ const Home = () => {
                         />
                     </SectionTile>
                     <Spacer minH={8} />
+                    <SectionTile fadeInDelay={80}>
+                        <FunFact
+                            heading="Personal Project"
+                            fact="In my final year of undergraduate study, I worked with a small team of friends to create an inventory management and point-of-sale system for a local bookstore, with a goal of improving their inventory management and checkout efficiency. We created this website using React and MongoDB."
+                            link="https://anovelideabookstore.com"
+                        />
+                    </SectionTile>
+                    <Spacer minH={8} />
                 </Box>
                 <Box flex="2 2 60%" textAlign="start">
                     <SectionTile fadeInDelay={40}>
