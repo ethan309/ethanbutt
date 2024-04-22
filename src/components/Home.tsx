@@ -19,15 +19,14 @@ import Skills from "./Skills";
 import SectionTile from "./SectionTile";
 import ThemeToggle from "./ThemeToggle";
 import FunFact from "./FunFact";
+import ViewSource from "./ViewSource";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 const Home = () => {
     const isSmallScreen = useIsSmallScreen();
 
     return (
-        <VStack spacing={8} my={4} pos="relative">
-            <Box position="fixed" top={2} right={2}>
-                <ThemeToggle />
-            </Box>
+        <VStack spacing={8} my={4}>
             <VisuallyHidden>
                 <Heading size="4xl">Ethan Bütt</Heading>
             </VisuallyHidden>
@@ -37,7 +36,6 @@ const Home = () => {
                 w="85%"
                 columnGap="2rem"
                 justifyContent="center"
-                pos="relative"
             >
                 <Box flex="1 1 30%">
                     <SectionTile>
@@ -78,6 +76,9 @@ const Home = () => {
                 </Box>
             </Flex>
             <Footer />
+            <ThemeToggle />
+            <ViewSource />
+            <PrivacyPolicy />
         </VStack>
     );
 };
