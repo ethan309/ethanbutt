@@ -8,6 +8,7 @@ const Skills = () => {
             <Skill label="JavaScript" type="technical" />
             <Skill label="TypeScript" type="technical" />
             <Skill label="React" type="technical" />
+            <Skill label="Vue" type="technical" familiarity="exposed" />
             <Skill label="Git" type="technical" />
             <Skill label="Node.js" type="technical" />
             <Skill label="Python" type="technical" />
@@ -21,7 +22,7 @@ const Skills = () => {
             <Skill label="MySQL" type="technical" familiarity="familiar" />
             <Skill label="C" type="technical" familiarity="exposed" />
             <Skill label="C++" type="technical" familiarity="familiar" />
-            <Skill label="Vue" type="technical" familiarity="exposed" />
+            <Skill label="M" type="technical" familiarity="familiar" />
             <Skill label="Haskell" type="technical" familiarity="exposed" />
             <Skill
                 label="Unity (SteamVR)"
