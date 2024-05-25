@@ -17,10 +17,7 @@ import CurrentProjectsGrid from "./CurrentProjectsGrid";
 import ViewResumeButton from "./ViewResumeButton";
 import Skills from "./Skills";
 import SectionTile from "./SectionTile";
-import ThemeToggle from "./ThemeToggle";
 import FunFact from "./FunFact";
-import ViewSource from "./ViewSource";
-import PrivacyPolicy from "./PrivacyPolicy";
 
 const Home = () => {
     const isSmallScreen = useIsSmallScreen();
@@ -62,7 +59,7 @@ const Home = () => {
                     <Spacer minH={8} />
                     <SectionTile fadeInDelay={80}>
                         <FunFact
-                            heading="Personal Project"
+                            heading="A Novel Idea"
                             fact="In my final year of undergraduate study, I worked with a small team of friends to create an inventory management and point-of-sale system for a local bookstore, with a goal of improving their inventory management and checkout efficiency. We created this website using React and MongoDB."
                             link="https://anovelideabookstore.com"
                         />
@@ -84,9 +81,6 @@ const Home = () => {
                 </Box>
             </Flex>
             <Footer />
-            <ThemeToggle />
-            <ViewSource />
-            <PrivacyPolicy />
         </VStack>
     );
 };
