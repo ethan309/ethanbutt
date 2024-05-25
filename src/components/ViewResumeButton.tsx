@@ -11,10 +11,7 @@ const ViewResumeButton = (props: IProps) => {
     const { label = "View Resume" } = props;
 
     const navigate = useExternalNavigate();
-    const onClick = useCallback(
-        () => navigate("https://apple.com"),
-        [navigate]
-    );
+    const onClick = useCallback(() => navigate("./A4.pdf"), [navigate]);
 
     return (
         <Button
