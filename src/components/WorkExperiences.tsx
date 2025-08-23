@@ -24,17 +24,30 @@ const WorkExperiences = () => {
                     // companyName="Epic"
                     CompanyLogo={<Image maxW="5rem" src={Images.EpicLogo} />}
                     companyLink="https://www.epic.com"
-                    position="Software Developer, Team Lead"
+                    position="Patient Experience Software Developer, Team Lead"
                     Description={
                         <Text>
                             Professionally grow team of developers, speak on
                             product vision with healthcare organizations to
                             improve inpatient outcomes, and prioritize project
-                            plans for MyChart Bedside. Lead Bedside TV platform
-                            launch, allowing hospital patients to access their
-                            health data on footwall TVs. Improve development
-                            processes, troubleshoot internal development issues,
-                            and conduct code reviews as Git and React expert.
+                            plans for{" "}
+                            <Link
+                                href="https://www.epic.com/software/patient-experience"
+                                isExternal
+                            >
+                                MyChart Bedside
+                            </Link>
+                            . Lead{" "}
+                            <Link
+                                href="https://www.epic.com/epicalmanac/archive/2025-2026"
+                                isExternal
+                            >
+                                Bedside TV platform launch
+                            </Link>
+                            , allowing hospital patients to access their health
+                            data on footwall TVs. Improve development processes,
+                            troubleshoot internal development issues, and
+                            conduct code reviews as Git and React expert.
                         </Text>
                     }
                 />
@@ -57,7 +70,7 @@ const WorkExperiences = () => {
                                 href="https://www.npmjs.com/package/create-local-addon"
                                 isExternal
                             >
-                                published to NPM.
+                                published to NPM
                             </Link>
                             .
                         </Text>
