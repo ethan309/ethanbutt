@@ -30,7 +30,7 @@ const Home = () => {
             <Flex
                 mt={4}
                 flexDir={isSmallScreen ? "column" : "row"}
-                w="85%"
+                w={["98%", "98%", "92%", "96%", "85%"]}
                 columnGap="2rem"
                 justifyContent="center"
             >
