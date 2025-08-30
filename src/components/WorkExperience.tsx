@@ -27,7 +27,11 @@ const WorkExperience = (props: IProps) => {
     const CompanyTitle = useMemo(() => {
         if (companyLogoPath) {
             const CompanyLogo = (
-                <Image maxW={companyLogoWidth} src={companyLogoPath} />
+                <Image
+                    maxW={companyLogoWidth}
+                    src={companyLogoPath}
+                    _hover={{ transform: "scale(1.05)" }}
+                />
             );
             return isNamePrintedToo ? (
                 <HStack>
