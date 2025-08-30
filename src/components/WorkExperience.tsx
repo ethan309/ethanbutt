@@ -25,25 +25,36 @@ const WorkExperience = (props: IProps) => {
     } = props;
 
     const CompanyTitle = useMemo(() => {
-        if (companyLogoPath) {
-            const CompanyLogo = (
-                <Image
-                    maxW={companyLogoWidth}
-                    src={companyLogoPath}
-                    _hover={{ transform: "scale(1.05)" }}
-                />
-            );
-            return isNamePrintedToo ? (
-                <HStack>
-                    {CompanyLogo}
-                    <Heading size="lg">{companyName}</Heading>
-                </HStack>
-            ) : (
-                CompanyLogo
-            );
+        const TitleHeading = <Heading size="lg">{companyName}</Heading>;
+
+        if (!companyLogoPath) {
+            return TitleHeading;
         }
-        return <Heading size="lg">{companyName}</Heading>;
-    }, [companyLogoPath, companyName, companyLogoWidth, isNamePrintedToo]);
+
+        const CompanyLogo = (
+            <Image
+                maxW={companyLogoWidth}
+                src={companyLogoPath}
+                _hover={{ transform: companyLink ? "scale(1.05)" : undefined }}
+                aria-description={`${companyName} company logo`}
+            />
+        );
+
+        return isNamePrintedToo ? (
+            <HStack>
+                {CompanyLogo}
+                <Heading size="lg">{companyName}</Heading>
+            </HStack>
+        ) : (
+            CompanyLogo
+        );
+    }, [
+        companyName,
+        companyLogoPath,
+        companyLogoWidth,
+        companyLink,
+        isNamePrintedToo,
+    ]);
 
     const CompanyTitleLine = useMemo(
         () =>
