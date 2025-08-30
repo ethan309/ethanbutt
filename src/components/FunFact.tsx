@@ -18,9 +18,9 @@ const FunFact = (props: IProps) => {
                 justifyContent="space-between"
                 alignItems="baseline"
             >
-                <Heading>{heading}</Heading>
+                <Heading textAlign="start">{heading}</Heading>
                 {subheading && (
-                    <Text fontSize="sm" as="i">
+                    <Text fontSize="sm" as="i" textAlign="end">
                         {subheading}
                     </Text>
                 )}

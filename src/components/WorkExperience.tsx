@@ -72,7 +72,7 @@ const WorkExperience = (props: IProps) => {
         <Stack>
             <HStack justifyContent="space-between">
                 {CompanyTitleLine}
-                <Text fontSize="sm" as="i">
+                <Text fontSize="sm" as="i" textAlign="end">
                     {timeframe}
                 </Text>
             </HStack>
