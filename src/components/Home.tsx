@@ -60,6 +60,7 @@ const Home = () => {
                     <SectionTile fadeInDelay={80}>
                         <FunFact
                             heading="A Novel Idea"
+                            subheading="Jan 2021 - Jan 2022"
                             fact="In my final year of undergraduate study, I worked with a small team of friends to create an inventory management and point-of-sale system for a local bookstore, with a goal of improving their inventory management and checkout efficiency. We created this website using React and MongoDB."
                             link="https://anovelideabookstore.com"
                         />
@@ -78,6 +79,7 @@ const Home = () => {
                         <Spacer minH={8} />
                         <WorkExperiences />
                     </SectionTile>
+                    <Spacer minH={8} />
                 </Box>
             </Flex>
             <Footer />
