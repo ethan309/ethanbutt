@@ -4,7 +4,6 @@ import {
     Stack,
     Text,
     Link,
-    Image,
     useColorModeValue,
 } from "@chakra-ui/react";
 import WorkExperience from "./WorkExperience";
@@ -21,10 +20,11 @@ const WorkExperiences = () => {
             <Heading mb={2}>Some Places I've Worked</Heading>
             <List spacing={10}>
                 <WorkExperience
-                    // companyName="Epic"
-                    CompanyLogo={<Image maxW="5rem" src={Images.EpicLogo} />}
+                    companyName="Epic"
+                    companyLogoPath={Images.EpicLogo}
                     companyLink="https://www.epic.com"
                     position="Patient Experience Software Developer, Team Lead"
+                    timeframe="Jul 2021 - Present"
                     Description={
                         <Text>
                             Professionally grow team of developers, speak on
@@ -52,10 +52,12 @@ const WorkExperiences = () => {
                     }
                 />
                 <WorkExperience
-                    // companyName="Flywheel"
-                    CompanyLogo={<Image maxW="12rem" src={FlywheelLogo} />}
+                    companyName="Flywheel"
+                    companyLogoPath={FlywheelLogo}
+                    companyLogoWidth="12rem"
                     companyLink="https://getflywheel.com"
                     position="Software Engineer Intern: Local Core Team"
+                    timeframe="May 2020 - Aug 2020"
                     Description={
                         <Text>
                             Maintained and added new features to{" "}
@@ -78,9 +80,11 @@ const WorkExperiences = () => {
                 />
                 <WorkExperience
                     companyName="Southwest Business Corporation"
-                    CompanyLogo={<Image maxW="5rem" src={Images.SwbcLogo} />}
+                    companyLogoPath={Images.SwbcLogo}
+                    isNamePrintedToo
                     companyLink="https://www.swbc.com"
                     position="Development Intern: Cloud and Innovation Team"
+                    timeframe="May 2019 - Aug 2019"
                     Description={
                         <Text>
                             Increased workflow efficiency by implementing
