@@ -42,7 +42,7 @@ const WorkExperience = (props: IProps) => {
                 CompanyLogo
             );
         }
-        return companyName ? <Heading size="lg">{companyName}</Heading> : null;
+        return <Heading size="lg">{companyName}</Heading>;
     }, [companyLogoPath, companyName, companyLogoWidth, isNamePrintedToo]);
 
     const CompanyTitleLine = useMemo(
