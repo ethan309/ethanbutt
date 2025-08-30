@@ -17,11 +17,14 @@ const Basics = () => {
                     a degree in Software Engineering from the University of
                     Nebraska - Lincoln
                 </Link>
-                . I was blessed with the opportunity to engage in a number of
-                research projects and internships during my undergraduate
-                career. These experiences showed me that I am drawn to the
-                design aspect of software development — creating intentional and
-                intuitive interfaces and interactions for users.
+                . I was blessed with the opportunity to engage in a number of{" "}
+                <Link href="https://nimbus.unl.edu" isExternal>
+                    research projects
+                </Link>{" "}
+                and internships during my undergraduate career. These
+                experiences showed me that I am drawn to the design aspect of
+                software development — creating intentional and intuitive
+                interfaces and interactions for users.
             </Text>
             <Text>
                 Outside work, I enjoy messing around with Photoshop, discovering
